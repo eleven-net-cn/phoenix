@@ -1,0 +1,54 @@
+{
+  "author": "Eleven <master@eleven.net.cn>",
+  "maintainers": [
+    "Eleven <master@eleven.net.cn>"
+  ],
+  "description": "Try to AI implement lowcode, Full-Stack",
+  "private": true,
+  "scripts": {
+    "watch": "turbo watch build",
+    "build": "turbo run build",
+    "release": "lerna publish",
+    "prepare": "husky",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix --max-warnings=0 --no-warn-ignored",
+    "lint:inspect": "npx @eslint/config-inspector@latest",
+    "commit": "cz"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.16.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "commitizen": "^4.3.1",
+    "commitlint": "^19.6.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.20.0",
+    "husky": "^9.1.7",
+    "lerna": "^8.2.2",
+    "turbo": "2.5.3"
+  },
+  "packageManager": "pnpm@10.10.0",
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css,scss,less,html,md,yml}": [
+      "eslint . --fix --max-warnings=0 --no-warn-ignored"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        0
+      ]
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "volta": {
+    "node": "22.17.1",
+    "pnpm": "10.13.1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@e.fe/phoenix-renderer",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Phoenix Renderer",
+  "author": "Eleven <eleven@eleven.net.cn>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eleven-net-cn/phoenix.git",
+    "directory": "packages/renderer"
+  },
+  "bugs": {
+    "url": "https://github.com/eleven-net-cn/phoenix/issues"
+  },
+  "keywords": [
+    "lowcode",
+    "renderer"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {},
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}

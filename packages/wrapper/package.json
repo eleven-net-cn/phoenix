@@ -1,0 +1,36 @@
+{
+  "name": "@e.fe/phoenix-wrapper",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Phoenix Wrapper",
+  "author": "Eleven <eleven@eleven.net.cn>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eleven-net-cn/phoenix.git",
+    "directory": "packages/wrapper"
+  },
+  "bugs": {
+    "url": "https://github.com/eleven-net-cn/phoenix/issues"
+  },
+  "keywords": [
+    "lowcode",
+    "wrapper"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {},
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+} 
