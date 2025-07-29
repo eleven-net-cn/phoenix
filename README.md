@@ -9,7 +9,10 @@ Try to implement low-code using AI (Full-Stack)
 ```
 phoenix/
 ├── apps/                    # Applications directory
-│   └── editor/             # Low-code editor frontend application
+│   ├── dashboard/          # Dashboard application (Next.js)
+│   ├── editor/             # Low-code editor application (Next.js)
+│   ├── material/           # Material management application (Nuxt.js)
+│   └── www/                # Public website application (Next.js)
 ├── packages/               # Packages directory
 │   ├── generator/          # Code generator
 │   ├── setting-form/       # Setting form component
@@ -29,7 +32,21 @@ phoenix/
 
 ### Apps
 
-- **editor**: Frontend editor application for the low-code building system, built with Next.js
+#### Frontend Applications
+
+- **dashboard** (`phoenix-dashboard`): Dashboard application built with Next.js 15 and React 19, providing administrative interface for the low-code platform
+- **editor** (`phoenix-editor`): Low-code editor application built with Next.js 15 and React 19, the core visual editor for building applications
+- **material** (`phoenix-material`): Material management application built with Nuxt.js 4 and Vue 3, providing component and asset management interface
+- **www** (`phoenix-www`): Public website application built with Next.js 15 and React 19, serving as the main landing page and documentation site
+
+#### Technology Stack by Application
+
+| Application | Framework | Language | UI Library | Purpose |
+|-------------|-----------|----------|------------|---------|
+| dashboard | Next.js 15 | TypeScript | React 19 | Admin Dashboard |
+| editor | Next.js 15 | TypeScript | React 19 | Low-Code Editor |
+| material | Nuxt.js 4 | TypeScript | Vue 3 | Material Management |
+| www | Next.js 15 | TypeScript | React 19 | Public Website |
 
 ### Packages
 
@@ -44,21 +61,29 @@ phoenix/
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework**: Next.js 15
-- **Backend Framework**: NestJS
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Package Manager**: pnpm
-- **Build Tool**: Turbo
-- **Code Linting**: ESLint
-- **Git Hooks**: Husky
+### Frontend Technologies
+- **Next.js 15**: React framework for production
+- **Nuxt.js 4**: Vue framework for production
+- **React 19**: UI library for Next.js applications
+- **Vue 3**: UI library for Nuxt.js applications
+- **TypeScript**: Programming language
+- **Tailwind CSS**: Utility-first CSS framework
+
+### Backend Technologies
+- **NestJS**: Progressive Node.js framework
+- **TypeScript**: Programming language
+
+### Development Tools
+- **pnpm**: Fast, disk space efficient package manager
+- **Turbo**: High-performance build system
+- **ESLint**: Code linting
 
 ## 🚀 Quick Start
 
 ### Requirements
 
 - Node.js >= 18
-- pnpm >= 8
+- pnpm >= 10
 
 ### Install Dependencies
 
@@ -72,10 +97,13 @@ pnpm install
 # Start all applications and services
 pnpm dev
 
-# Start specific application
+# Start specific applications
+pnpm dev --filter=dashboard
 pnpm dev --filter=editor
+pnpm dev --filter=material
+pnpm dev --filter=www
 
-# Start specific service
+# Start specific services
 pnpm dev --filter=builder
 pnpm dev --filter=material
 ```
@@ -86,10 +114,16 @@ pnpm dev --filter=material
 # Build all packages, applications and services
 pnpm build
 
-# Build specific package
+# Build specific applications
+pnpm build --filter=dashboard
+pnpm build --filter=editor
+pnpm build --filter=material
+pnpm build --filter=www
+
+# Build specific packages
 pnpm build --filter=@e.fe/phoenix-generator
 
-# Build specific service
+# Build specific services
 pnpm build --filter=builder
 pnpm build --filter=material
 ```
@@ -98,10 +132,18 @@ pnpm build --filter=material
 
 ### Adding New Applications
 
+#### Next.js Applications
 Create new Next.js applications in the `apps` directory:
 
 ```bash
 npx create-next-app@latest apps/your-app-name --typescript --tailwind --eslint --app --src-dir --import-alias "@/*" --yes
+```
+
+#### Nuxt.js Applications
+Create new Nuxt.js applications in the `apps` directory:
+
+```bash
+npx nuxi@latest init apps/your-app-name
 ```
 
 ### Adding New Packages
@@ -122,14 +164,6 @@ npx @nestjs/cli@latest new servers/your-service-name --package-manager pnpm --sk
 
 ### Package Naming Convention
 
-- Application packages: Use application name directly
+- Application packages: Use application name directly (e.g., `phoenix-dashboard`)
 - Feature packages: Use `@e.fe/phoenix-{package-name}` format
 - Service packages: Use service name directly
-
-## 🤝 Contributing
-
-1. Fork this repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
