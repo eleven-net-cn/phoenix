@@ -3,8 +3,9 @@
   "maintainers": [
     "Eleven <master@eleven.net.cn>"
   ],
-  "description": "Try to AI implement lowcode, Full-Stack",
+  "description": "Try to implement low-code using AI (Full-Stack)",
   "private": true,
+  "type": "module",
   "scripts": {
     "watch": "turbo watch build",
     "build": "turbo run build",
@@ -28,7 +29,7 @@
   },
   "packageManager": "pnpm@10.10.0",
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css,scss,less,html,md,yml}": [
+    "src/**/*.{js,jsx,ts,tsx,vue,json,css,scss,less,html,md,yml}": [
       "eslint . --fix --max-warnings=0 --no-warn-ignored"
     ]
   },

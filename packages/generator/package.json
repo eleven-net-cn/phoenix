@@ -1,21 +1,21 @@
 {
-  "name": "@e.fe/phoenix-renderer",
+  "name": "@e.fe/phoenix-generator",
   "type": "module",
   "version": "1.0.0",
-  "description": "Phoenix Renderer",
+  "description": "Phoenix Generator",
   "author": "Eleven <eleven@eleven.net.cn>",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/eleven-net-cn/phoenix.git",
-    "directory": "packages/renderer"
+    "directory": "packages/generator"
   },
   "bugs": {
     "url": "https://github.com/eleven-net-cn/phoenix/issues"
   },
   "keywords": [
     "lowcode",
-    "renderer"
+    "generator"
   ],
   "exports": {
     ".": {

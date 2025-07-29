@@ -1,0 +1,33 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 编码规范
+
+- 使用 TypeScript 和 React 19、Vue3 书写
+- Vue 应用使用 setup script SFC 组件和 Composition API，避免 Optional 组件或 API
+- Vue SFC setup script 组件内，按照 script/template/style 的顺序排列，script 块在文件最顶部
+- Vue Hooks 编写时，文件命名必须小驼峰（camelCase），并以 use 打头
+- React/Vue Hooks 遵循单一职责，每个模块文件仅负责专用功能，不允许多个 hooks 函数位于同一个模块文件中
+- 使用提前返回（early returns）提高代码可读性
+- 避免引入新依赖，严控打包体积
+- 兼容 Chrome 80+ 浏览器
+- 保持向下兼容，避免 breaking change
+- 组件名使用大驼峰（PascalCase）
+- 文件名、函数名、属性名使用小驼峰（camelCase）
+
+# 路径规范
+
+- 所有 /src/ 的路径应替换使用 @/，@ 符号是 vite 中配置的 alias 路径别名，映射到 src 目录
+
+# 样式规范
+
+- 样式优先使用 unocss
+- unocss 的自定义前缀为 un-，所有 unocss 样式都应以此前缀打头
+- 设计稿中的 CSS 默认样式可以不添加，保持浏览器默认即可，除非受到了父级相同属性设置继承的影响
+- 容器内子元素的间距，优先使用 unocss 的 un-space-x-/un-space-y- 样式类设置间距，而不是通过 margin 设置左右间距
+
+# 格式化规范
+
+- 项目采用 eslint 约束代码风格，不使用 prettier

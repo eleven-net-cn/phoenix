@@ -1,8 +1,17 @@
 import antfu from '@antfu/eslint-config';
 
 export default antfu({
-  type: '',
-  ignores: [],
+  typescript: {
+    tsconfigPath: './tsconfig.json',
+  },
+  jsx: true,
+  ignores: [
+    'node_modules/**',
+    'dist/**',
+    '.next/**',
+    '.nuxt/**',
+    'coverage/**',
+  ],
   rules: {
     'style/semi': ['error', 'always'],
     'style/quotes': ['error', 'single', {
@@ -32,5 +41,9 @@ export default antfu({
     'antfu/if-newline': 'off',
     'perfectionist/sort-imports': 'off',
     'no-template-curly-in-string': 'off',
+    'ts/no-unsafe-assignment': 'off',
+    'ts/no-unsafe-member-access': 'off',
+    'ts/no-unsafe-call': 'off',
+    'ts/no-floating-promises': 'off',
   },
 });

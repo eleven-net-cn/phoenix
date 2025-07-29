@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 项目背景
+
+这是一个低代码搭建系统的全栈项目，包含了所有前端应用、后端应用和抽象的公共类库、组件库。
+
+- 主要使用 React、NextJS 和 TypeScript 开发，同时也有若干前端应用使用 Vue3、NuxtJS 和 Typescript 开发
