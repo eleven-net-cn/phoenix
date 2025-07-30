@@ -1,9 +1,9 @@
 {
   "name": "phoenix-builder",
-  "version": "0.0.1",
   "description": "Phoenix Builder",
   "author": "Eleven <eleven@eleven.net.cn>",
   "private": true,
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "build": "nest build",

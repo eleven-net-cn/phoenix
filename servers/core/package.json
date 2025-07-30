@@ -1,9 +1,9 @@
 {
-  "name": "phoenix-material",
-  "version": "0.0.1",
-  "description": "Phoenix Material",
+  "name": "phoenix-core",
+  "description": "Phoenix Core",
   "author": "Eleven <eleven@eleven.net.cn>",
   "private": true,
+  "type": "module",
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",

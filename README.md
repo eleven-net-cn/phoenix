@@ -11,15 +11,15 @@ phoenix/
 ├── apps/                    # Applications directory
 │   ├── dashboard/          # Dashboard application (Next.js)
 │   ├── editor/             # Low-code editor application (Next.js)
-│   ├── material/           # Material management application (Nuxt.js)
 │   └── www/                # Public website application (Next.js)
 ├── packages/               # Packages directory
 │   ├── generator/          # Code generator
+│   ├── renderer/           # Renderer component
 │   ├── setting-form/       # Setting form component
 │   └── wrapper/            # Wrapper component
 ├── servers/                # Backend services directory
 │   ├── builder/            # Low-code builder backend service
-│   └── material/           # Material management backend service
+│   └── core/               # Core backend service
 ├── .husky/                 # Git hooks configuration
 ├── .vscode/               # VS Code configuration
 ├── package.json           # Root package configuration
@@ -36,7 +36,6 @@ phoenix/
 
 - **dashboard** (`phoenix-dashboard`): Dashboard application built with Next.js 15 and React 19, providing administrative interface for the low-code platform
 - **editor** (`phoenix-editor`): Low-code editor application built with Next.js 15 and React 19, the core visual editor for building applications
-- **material** (`phoenix-material`): Material management application built with Nuxt.js 4 and Vue 3, providing component and asset management interface
 - **www** (`phoenix-www`): Public website application built with Next.js 15 and React 19, serving as the main landing page and documentation site
 
 #### Technology Stack by Application
@@ -45,19 +44,19 @@ phoenix/
 |-------------|-----------|----------|------------|---------|
 | dashboard | Next.js 15 | TypeScript | React 19 | Admin Dashboard |
 | editor | Next.js 15 | TypeScript | React 19 | Low-Code Editor |
-| material | Nuxt.js 4 | TypeScript | Vue 3 | Material Management |
 | www | Next.js 15 | TypeScript | React 19 | Public Website |
 
 ### Packages
 
 - **@e.fe/phoenix-generator**: Code generator responsible for generating code based on configurations
+- **@e.fe/phoenix-renderer**: Renderer component providing rendering functionality for low-code components
 - **@e.fe/phoenix-setting-form**: Setting form component providing unified form configuration interface
 - **@e.fe/phoenix-wrapper**: Wrapper component providing component wrapping and enhancement functionality
 
 ### Servers
 
 - **builder**: Backend service for the low-code building system, built with NestJS
-- **material**: Material management service for component and asset management, built with NestJS
+- **core**: Core backend service providing essential functionality, built with NestJS
 
 ## 🛠️ Tech Stack
 
@@ -100,12 +99,11 @@ pnpm dev
 # Start specific applications
 pnpm dev --filter=dashboard
 pnpm dev --filter=editor
-pnpm dev --filter=material
 pnpm dev --filter=www
 
 # Start specific services
 pnpm dev --filter=builder
-pnpm dev --filter=material
+pnpm dev --filter=core
 ```
 
 ### Build
@@ -117,7 +115,6 @@ pnpm build
 # Build specific applications
 pnpm build --filter=dashboard
 pnpm build --filter=editor
-pnpm build --filter=material
 pnpm build --filter=www
 
 # Build specific packages
@@ -125,7 +122,7 @@ pnpm build --filter=@e.fe/phoenix-generator
 
 # Build specific services
 pnpm build --filter=builder
-pnpm build --filter=material
+pnpm build --filter=core
 ```
 
 ## 📝 Development Guide

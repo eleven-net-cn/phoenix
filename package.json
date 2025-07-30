@@ -1,11 +1,12 @@
 {
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.10.0",
+  "description": "Try to implement low-code using AI (Full-Stack)",
   "author": "Eleven <master@eleven.net.cn>",
   "maintainers": [
     "Eleven <master@eleven.net.cn>"
   ],
-  "description": "Try to implement low-code using AI (Full-Stack)",
-  "private": true,
-  "type": "module",
   "scripts": {
     "watch": "turbo watch build",
     "build": "turbo run build",
@@ -27,7 +28,6 @@
     "lerna": "^8.2.2",
     "turbo": "2.5.3"
   },
-  "packageManager": "pnpm@10.10.0",
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,vue,json,css,scss,less,html,md,yml}": [
       "eslint . --fix --max-warnings=0 --no-warn-ignored"
