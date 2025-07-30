@@ -11,10 +11,9 @@ phoenix/
 ├── apps/                    # Applications directory
 │   ├── dashboard/          # Dashboard application (Next.js)
 │   ├── editor/             # Low-code editor application (Next.js)
-│   └── www/                # Public website application (Next.js)
+│   └── www/                # Public website application (Nuxt.js)
 ├── packages/               # Packages directory
 │   ├── generator/          # Code generator
-│   ├── renderer/           # Renderer component
 │   ├── setting-form/       # Setting form component
 │   └── wrapper/            # Wrapper component
 ├── servers/                # Backend services directory
@@ -36,7 +35,7 @@ phoenix/
 
 - **dashboard** (`phoenix-dashboard`): Dashboard application built with Next.js 15 and React 19, providing administrative interface for the low-code platform
 - **editor** (`phoenix-editor`): Low-code editor application built with Next.js 15 and React 19, the core visual editor for building applications
-- **www** (`phoenix-www`): Public website application built with Next.js 15 and React 19, serving as the main landing page and documentation site
+- **www** (`phoenix-www`): Public website application built with Nuxt.js 4 and Vue 3, serving as the main landing page and documentation site
 
 #### Technology Stack by Application
 
@@ -44,12 +43,11 @@ phoenix/
 |-------------|-----------|----------|------------|---------|
 | dashboard | Next.js 15 | TypeScript | React 19 | Admin Dashboard |
 | editor | Next.js 15 | TypeScript | React 19 | Low-Code Editor |
-| www | Next.js 15 | TypeScript | React 19 | Public Website |
+| www | Nuxt.js 4 | TypeScript | Vue 3 | Public Website |
 
 ### Packages
 
 - **@e.fe/phoenix-generator**: Code generator responsible for generating code based on configurations
-- **@e.fe/phoenix-renderer**: Renderer component providing rendering functionality for low-code components
 - **@e.fe/phoenix-setting-form**: Setting form component providing unified form configuration interface
 - **@e.fe/phoenix-wrapper**: Wrapper component providing component wrapping and enhancement functionality
 
