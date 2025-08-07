@@ -10,8 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@phoenix/shared-unocss": "workspace:*",
+    "@vueuse/core": "^13.6.0",
     "nuxt": "^4.0.1",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@unocss/nuxt": "^0.58.9",
+    "unocss": "^0.58.9"
   }
 }
