@@ -8,6 +8,7 @@
     "Eleven <master@eleven.net.cn>"
   ],
   "scripts": {
+    "start:editor": "pnpm --filter ./apps/editor dev",
     "watch": "turbo watch build",
     "build": "turbo run build",
     "release": "lerna publish",

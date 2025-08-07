@@ -4,14 +4,6 @@
 
 Try to implement low-code using AI (Full-Stack)
 
-## 📚 快速开始
-
-如果你是第一次接触这个项目，建议按以下顺序阅读文档：
-
-1. **[快速上手指南](./docs/QUICK_START.md)** - 5分钟了解项目架构和开发流程
-2. **[项目背景](./docs/PROJECT_BACKGROUND.md)** - 详细的项目架构设计和开发规范
-3. **[开发规范](./.cursor/rules/)** - 编码规范和技术标准
-
 ## 🚀 Project Structure
 
 ```
@@ -70,7 +62,7 @@ phoenix/
 - **React 19**: UI library for Next.js applications
 - **Vue 3**: UI library for Nuxt.js applications
 - **TypeScript**: Programming language
-- **Tailwind CSS**: Utility-first CSS framework
+- **UnoCSS**: Utility-first CSS framework
 
 ### Backend Technologies
 - **NestJS**: Progressive Node.js framework
@@ -80,6 +72,56 @@ phoenix/
 - **pnpm**: Fast, disk space efficient package manager
 - **Turbo**: High-performance build system
 - **ESLint**: Code linting
+
+## 🎨 Style Guide
+
+### UnoCSS Usage Guidelines
+
+#### Class Mode (Recommended)
+When using UnoCSS in `className` or `class` attributes, **no prefix is required**:
+
+```tsx
+// React/Next.js
+<div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-md">
+  <span className="text-lg font-semibold text-gray-800">Content</span>
+</div>
+
+// Vue/Nuxt.js
+<template>
+  <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md">
+    <span class="text-lg font-semibold text-gray-800">Content</span>
+  </div>
+</template>
+```
+
+#### Attribute Mode (Advanced)
+When using UnoCSS in attribute mode, **`un-` prefix is mandatory**:
+
+```tsx
+// React/Next.js
+<div un-flex="~" un-items="center" un-justify="center" un-p="4" un-bg="white" un-rounded="lg" un-shadow="md">
+  <span un-text="lg" un-font="semibold" un-text="gray-800">Content</span>
+</div>
+
+// Vue/Nuxt.js
+<template>
+  <div un-flex="~" un-items="center" un-justify="center" un-p="4" un-bg="white" un-rounded="lg" un-shadow="md">
+    <span un-text="lg" un-font="semibold" un-text="gray-800">Content</span>
+  </div>
+</template>
+```
+
+#### Spacing Guidelines
+- Use UnoCSS spacing utilities (`space-x-`, `space-y-`) for container child element spacing
+- Avoid using margin for horizontal/vertical spacing between elements
+- Prefer `space-x-4` over `[&>*+*]:ml-4` for horizontal spacing
+- Prefer `space-y-4` over `[&>*+*]:mt-4` for vertical spacing
+
+#### Design System Integration
+- Follow the established design token system in each application's UnoCSS configuration
+- Use semantic color names (e.g., `primary-500`, `success`, `warning`) over raw colors
+- Leverage the spacing scale (`xs`, `sm`, `md`, `lg`, `xl`, `xxl`) for consistent spacing
+- Use the typography scale for font sizes and weights
 
 ## 🚀 Quick Start
 
