@@ -3,8 +3,18 @@ description:
 globs: 
 alwaysApply: true
 ---
-# 项目背景
+# 项目
 
-这是一个低代码搭建系统的全栈项目，包含了所有前端应用、后端应用和抽象的公共类库、组件库。
+这是一个低代码搭建系统的全栈项目，全部使用 Typescript 开发，前端应用主要使用 React、NextJS，同时也有若干前端应用使用 Vue3、NuxtJS。仓库包含了所有前端应用、后端应用和抽象的公共类库、组件库等。
 
-- 主要使用 React、NextJS 和 TypeScript 开发，同时也有若干前端应用使用 Vue3、NuxtJS 和 Typescript 开发
+- apps 前端应用
+  - apps/dashboard 低代码系统工作台，包含了应用管理、模板管理、物料市场、用户管理等
+  - apps/www 低代码系统主站，基本的功能介绍、引导工作台
+  - apps/editor 低代码搭建编辑器，拖拽组件搭建页面和应用，构建和部署应用
+- packages 核心公共类库
+  - generator 应用构建生成器，从 JSON Schema 配置生成应用
+  - setting-form 物料组件的表单 SDK，为最小化表单代码开发
+  - wrapper 物料组件包裹层，高阶组件，代理所有组件的公共能力，包含事件等
+- servers 后端应用
+  - builder Node 应用，接收请求后使用 generator 打包生成应用
+- shared 所有应用间的共享能力，包含打包配置、代码规范等

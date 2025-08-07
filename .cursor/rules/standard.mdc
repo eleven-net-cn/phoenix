@@ -19,7 +19,7 @@ alwaysApply: true
 
 # 路径规范
 
-- 所有 /src/ 的路径应替换使用 @/，@ 符号是 vite 中配置的 alias 路径别名，映射到 src 目录
+- 所有 /src/ 的路径应替换使用 @/，@ 符号是 alias 路径别名，映射到 src 目录
 
 # 样式规范
 
@@ -30,4 +30,4 @@ alwaysApply: true
 
 # 格式化规范
 
-- 项目采用 eslint 约束代码风格，不使用 prettier
+- 项目采用 eslint 约束代码风格和格式化，不使用 prettier
