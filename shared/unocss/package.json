@@ -1,0 +1,53 @@
+{
+  "name": "@phoenix/shared-unocss",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Phoenix UnoCSS design system and configuration",
+  "author": "Phoenix Team",
+  "license": "MIT",
+  "keywords": [
+    "unocss",
+    "design-system",
+    "css",
+    "utility-first"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.mjs",
+      "require": "./dist/config.js"
+    },
+    "./tokens": {
+      "types": "./dist/tokens.d.ts",
+      "import": "./dist/tokens.mjs",
+      "require": "./dist/tokens.js"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "unocss": "^0.58.0"
+  },
+  "dependencies": {
+    "unocss": "^0.58.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
