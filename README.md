@@ -4,6 +4,14 @@
 
 Try to implement low-code using AI (Full-Stack)
 
+## 📚 快速开始
+
+如果你是第一次接触这个项目，建议按以下顺序阅读文档：
+
+1. **[快速上手指南](./docs/QUICK_START.md)** - 5分钟了解项目架构和开发流程
+2. **[项目背景](./docs/PROJECT_BACKGROUND.md)** - 详细的项目架构设计和开发规范
+3. **[开发规范](./.cursor/rules/)** - 编码规范和技术标准
+
 ## 🚀 Project Structure
 
 ```
