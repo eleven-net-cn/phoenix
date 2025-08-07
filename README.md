@@ -17,8 +17,7 @@ phoenix/
 │   ├── setting-form/       # Setting form component
 │   └── wrapper/            # Wrapper component
 ├── servers/                # Backend services directory
-│   ├── builder/            # Low-code builder backend service
-│   └── core/               # Core backend service
+│   └── builder/            # Low-code builder backend service
 ├── .husky/                 # Git hooks configuration
 ├── .vscode/               # VS Code configuration
 ├── package.json           # Root package configuration
@@ -54,7 +53,6 @@ phoenix/
 ### Servers
 
 - **builder**: Backend service for the low-code building system, built with NestJS
-- **core**: Core backend service providing essential functionality, built with NestJS
 
 ## 🛠️ Tech Stack
 
@@ -101,7 +99,6 @@ pnpm dev --filter=www
 
 # Start specific services
 pnpm dev --filter=builder
-pnpm dev --filter=core
 ```
 
 ### Build
@@ -120,7 +117,6 @@ pnpm build --filter=@e.fe/phoenix-generator
 
 # Build specific services
 pnpm build --filter=builder
-pnpm build --filter=core
 ```
 
 ## 📝 Development Guide
