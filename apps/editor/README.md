@@ -1,36 +1,167 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Phoenix Editor - 低代码编辑器
 
-## Getting Started
+Phoenix Editor 是 Phoenix 低代码搭建系统的核心编辑器，提供可视化的页面搭建功能。
 
-First, run the development server:
+## 🚀 功能特性
+
+### ✅ 已实现功能
+
+#### 1. 基础编辑器界面
+- **三栏布局**: 左侧组件库、中间画布、右侧属性配置
+- **响应式设计**: 支持不同屏幕尺寸
+- **现代化UI**: 使用 Ant Design 和 UnoCSS
+
+#### 2. 组件库系统
+- **组件分类**: 容器、展示、表单三大类
+- **组件搜索**: 支持按名称搜索组件
+- **组件预览**: 显示组件图标和描述
+- **点击添加**: 点击组件直接添加到画布
+
+#### 3. 画布系统
+- **网格背景**: 可选的网格辅助对齐
+- **缩放控制**: 支持画布缩放（25% - 200%）
+- **组件渲染**: 支持多种组件类型的渲染
+- **选择交互**: 点击选择组件，显示选择框
+
+#### 4. 属性配置面板
+- **动态表单**: 根据组件类型动态生成配置表单
+- **属性编辑**: 支持字符串、数字等类型的属性编辑
+- **样式配置**: 支持宽度、高度、背景色等样式配置
+- **实时预览**: 配置修改时实时预览效果
+
+#### 5. 状态管理
+- **Zustand**: 轻量级状态管理
+- **历史记录**: 支持撤销/重做操作
+- **组件数据**: 完整的组件数据结构
+
+### 🔄 当前支持的组件类型
+
+1. **容器组件**
+   - 基础容器，支持标题配置
+   - 可设置背景色、内边距等样式
+
+2. **文本组件**
+   - 文本内容编辑
+   - 支持字体大小、颜色配置
+
+3. **按钮组件**
+   - 按钮文本和类型配置
+   - 支持主要、次要、危险等类型
+   - 可设置背景色
+
+4. **图片组件**
+   - 图片地址和替代文本配置
+   - 支持宽度、高度设置
+
+## 🛠️ 技术栈
+
+- **框架**: Next.js 15 + React 19
+- **语言**: TypeScript
+- **UI库**: Ant Design 5
+- **样式**: UnoCSS
+- **状态管理**: Zustand + Immer
+- **拖拽**: @dnd-kit/core
+- **工具库**: lodash-es, clsx
+
+## 🚀 快速开始
+
+### 开发环境
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# 安装依赖
+pnpm install
+
+# 启动开发服务器
 pnpm dev
-# or
-bun dev
+
+# 构建生产版本
+pnpm build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 访问地址
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+开发服务器启动后，访问: http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📖 使用指南
 
-## Learn More
+### 1. 添加组件
+1. 在左侧组件库中选择需要的组件
+2. 点击组件将其添加到画布
+3. 组件会自动添加到画布中心位置
 
-To learn more about Next.js, take a look at the following resources:
+### 2. 选择组件
+1. 点击画布中的组件进行选择
+2. 选中的组件会显示蓝色选择框
+3. 右侧面板会显示该组件的配置选项
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. 配置组件
+1. 选择组件后，在右侧面板进行配置
+2. **属性标签页**: 配置组件的基础属性
+3. **样式标签页**: 配置组件的样式属性
+4. **事件标签页**: 配置组件的事件处理（开发中）
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. 编辑组件
+- 支持修改组件的各种属性
+- 样式修改会实时预览
+- 支持撤销/重做操作
 
-## Deploy on Vercel
+## 🏗️ 项目结构
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── components/          # 组件目录
+│   ├── Editor.tsx      # 主编辑器组件
+│   ├── Canvas.tsx      # 画布组件
+│   ├── ComponentLibrary.tsx  # 组件库
+│   ├── ComponentRenderer.tsx # 组件渲染器
+│   └── Inspector.tsx   # 属性配置面板
+├── store/              # 状态管理
+│   └── editorStore.ts  # 编辑器状态
+├── types/              # 类型定义
+│   └── index.ts        # 核心类型
+└── utils/              # 工具函数
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔧 开发计划
+
+### Phase 1: 基础功能 ✅
+- [x] 画布容器搭建
+- [x] 基础组件拖拽
+- [x] 组件选择和高亮
+- [x] 基础属性配置
+
+### Phase 2: 布局系统 🚧
+- [ ] 文档流布局
+- [ ] 绝对定位布局
+- [ ] 固定定位布局
+- [ ] 粘性定位布局
+
+### Phase 3: 高级功能 📋
+- [ ] 组件拖拽移动
+- [ ] 组件缩放调整
+- [ ] 组件组合功能
+- [ ] 模板系统
+
+### Phase 4: 完善优化 📋
+- [ ] 事件配置系统
+- [ ] 数据绑定功能
+- [ ] 版本控制
+- [ ] 协作功能
+
+## 🤝 贡献指南
+
+1. Fork 项目
+2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开 Pull Request
+
+## 📄 许可证
+
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+---
+
+**开发状态**: 🚧 开发中  
+**最后更新**: 2024年12月  
+**维护者**: Eleven <master@eleven.net.cn>
