@@ -157,7 +157,7 @@ export const Inspector: React.FC<InspectorProps> = ({ className }) => {
       key: 'props',
       label: '属性',
       children: (
-        <div className="un-p-4">
+        <div>
           {renderPropsForm()}
         </div>
       ),
@@ -166,7 +166,7 @@ export const Inspector: React.FC<InspectorProps> = ({ className }) => {
       key: 'style',
       label: '样式',
       children: (
-        <div className="un-p-4">
+        <div>
           {renderStyleForm()}
         </div>
       ),
@@ -175,7 +175,7 @@ export const Inspector: React.FC<InspectorProps> = ({ className }) => {
       key: 'events',
       label: '事件',
       children: (
-        <div className="un-p-4">
+        <div>
           {renderEventsForm()}
         </div>
       ),
@@ -189,7 +189,7 @@ export const Inspector: React.FC<InspectorProps> = ({ className }) => {
         <div className="un-text-sm un-text-gray-500">{selectedComponent.type}</div>
       </div>
       
-      <div className="un-flex-1 un-overflow-auto">
+      <div className="un-flex-1 un-px-2 un-overflow-auto">
         <Tabs defaultActiveKey="props" size="small" items={tabItems} />
       </div>
     </div>
