@@ -10,6 +10,10 @@ alwaysApply: true
 - Vue SFC setup script 组件内，按照 script/template/style 的顺序排列，script 块在文件最顶部
 - Vue Hooks 编写时，文件命名必须小驼峰（camelCase），并以 use 打头
 - React/Vue Hooks 遵循单一职责，每个模块文件仅负责专用功能，不允许多个 hooks 函数位于同一个模块文件中
+- Hooks 文件命名必须与函数名完全一致，例如：useWindowSize.ts 文件只能包含 useWindowSize 函数
+- Hooks 目录下的 index.ts 文件仅用于重新导出各个独立的 hooks 文件，不包含具体实现
+- 优先使用成熟的 hooks 库：NextJS 项目使用 ahooks，NuxtJS 项目使用 vueuse
+- 避免重复造轮子，优先使用 ahooks/vueuse 提供的功能，如 useSize、useBoolean、useLocalStorageState 等
 - 使用提前返回（early returns）提高代码可读性
 - 避免引入新依赖，严控打包体积
 - 兼容 Chrome 80+ 浏览器
